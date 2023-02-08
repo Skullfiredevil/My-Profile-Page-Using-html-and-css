@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link href="style.css" rel="style">
+    <title>My Scary Profile</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1 class="logo-text">Smth™</h1>
+        <div class="hamburger-icon">
+          <label for="dropdown">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-x"></i>
+          </label>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container container-1">
+      <a href="https://github.com/Skullfiredevil"> This is my Github</a>
+    </div>
+    <div class="container container-2">
+      <a href="https://twitter.com/Skullfiredevil1">This is my Twitter</a>
+      </div>
+      <div class="container container-3">
+      <a href="https://instagram.com/skullfiredevil">This is my Instagram</a>
+    </div>
+    </main>
+  </body>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration:none;
+  box-sizing:border-box;
+}
+body{
+  background-color:lightgrey;
+}
+
+.hamburger-icon {
+  display: none;
+}
+
+header {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: darkslateblue;
+}
+.logo-text{
+  color:white;
+}
+
+.hamburger-icon{
+  border:none;
+  background-color:transparent;
+}
+
+.hamburger-icon .fa-bars,
+.hamburger-icon .fa-x{
+  color:white;
+  font-size:1rem;
+  cursor:pointer;
+}
+
+.hamburger-icon input[type="checkbox"] {
+  appearance: none;
+}
+
+
+@media screen and (max-width: 600px) {
+  header {
+    display: block;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: space-between;
+  }
+  .hamburger-icon {
+    display: block;
+  }
+  .fa-x{
+    display:none;
+  }
+  header:has(.hamburger-icon input[type="checkbox"]:checked) .navigation {
+    margin-top: 1rem;
+    height:100px;
+  }
+  header:has(.hamburger-icon input[type="checkbox"]:checked) .fa-bars {
+    display:none;
+  }
+  header:has(.hamburger-icon input[type="checkbox"]:checked) .fa-x {
+    display:inline-block;
+  }
+}
+
+
+/* Content CSS */
+.container{
+  height:100vh;
+  display:grid;
+  place-items:center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size:cover;
+}
+.container:nth-child(1){
+  margin-top:0;
+}
+
+.container a{
+  text-align:center;
+  font-size:3rem;
+  color:white;
+  text-shadow:2px 2px black;
+  transition:all 0.5s linear;
+}
+.container button{
+  color:white;
+}
+
+.container-1{
+  background-image:url("https://i.imgur.com/asaSb2O.png")
+}
+.container-2{
+  background-image:url("https://i.imgur.com/GAVf8QH.png")
+}
+.container-3{
+  background-image:url("https://i.imgur.com/qmcCpvT.png")
+}
+
+  </style>
+</html>
